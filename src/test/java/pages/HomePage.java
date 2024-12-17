@@ -14,13 +14,17 @@ public class HomePage {
 	
 	@FindBy(xpath="//button[@id='customer-menu']//*[name()='svg']")  WebElement headerMyAccountIcon;
 	@FindBy(xpath="//a[@id='customer.header.sign.in.link']") WebElement loginButton;
+	@FindBy(xpath="//a[@id='customer.header.register.link']") WebElement signup;
 	
 	public void clickOnLoginButton() {
 		headerMyAccountIcon.click();
 		loginButton.click();
-		
-		
 	}
+	public void clickOnSignupButton() {
+		headerMyAccountIcon.click();
+		signup.click();
+	}
+	
 	
 	public void selectCOD() {
 		
