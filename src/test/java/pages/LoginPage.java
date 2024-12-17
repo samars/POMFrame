@@ -8,12 +8,10 @@ public class LoginPage {
 	
 	WebDriver driver;
 	
-	//This is new commit from samar_sam
-	public LoginPage(WebDriver ldriver) {
-		
-		this.driver=ldriver;
-		
-		
+	
+	public LoginPage(WebDriver ldriver) 
+	{
+		this.driver=ldriver;	
 	}
 	
 	@FindBy(xpath="//input[@id='email']") WebElement loginText;
@@ -21,7 +19,8 @@ public class LoginPage {
 	@FindBy(xpath="//button[@name='send']") WebElement loginButton;
 	
 	
-	public void loginToApp(String uname, String pass) {
+	public void loginToApp(String uname, String pass) 
+	{
 		loginText.sendKeys(uname);
 		passwordText.sendKeys(pass);
 		loginButton.click();	
